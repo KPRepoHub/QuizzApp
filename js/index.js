@@ -21,6 +21,9 @@
 
 console.log("start of index.js");
 
+// so that can be used 
+let intervalTimerVar;
+
 window.addEventListener("DOMContentLoaded", () => {
   const start = document.querySelector("#start");
   start.addEventListener("click", function (e) {
@@ -201,6 +204,10 @@ window.addEventListener("DOMContentLoaded", () => {
     console.log("submit button click event");
 
     calculateScore();
+
+    //stop the timer
+    clearInterval(intervalTimerVar); 
+
   });
 
   // call the displayQuiz function
@@ -219,7 +226,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // let count = 0;
 
     //update every 1 second
-    let intervalTimerVar = setInterval(() => {
+    intervalTimerVar = setInterval(() => {
       let days = Math.floor(distance / (1000 * 60 * 60 * 24));
       console.log("distance ", distance);
 
