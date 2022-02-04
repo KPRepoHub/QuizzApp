@@ -251,7 +251,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   //set timer for the quiz
-  displayTimeCounter(10);
+  displayTimeCounter(60);
 
   //star timer
   //and display counter down
